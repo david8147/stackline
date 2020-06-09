@@ -11,11 +11,11 @@ const SalesData = ({data}) => {
 
     const y = d3.scaleLinear()
         .domain([100, d3.max(data, d => d.retailSales)])
-        .range([200, 150]);
+        .range([150, 100]);
 
     const y2 = d3.scaleLinear()
         .domain([150, d3.max(data, d => d.wholesaleSales)])
-        .range([250, 200]);
+        .range([200, 150]);
 
     const retailLine = d3.line()
         .x(data => x(parseDate(data.weekEnding)))
