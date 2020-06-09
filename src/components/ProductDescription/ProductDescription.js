@@ -5,22 +5,18 @@ import sales from '../../img/sales.png';
 import Tags from '../Tags/Tags';
 import Product from '../Product/Product';
 
-const ProductDescription= ({productData}) => {
+const ProductDescription= ({data}) => {
     return (
-        <div className='product-container'>
-            <Product
-                title={productData.title}
-                image={productData.image}
-                subtitle={productData.subtitle}
-            />
-            <Tags tags={productData.tags} />
-            <div style={{display:'flex', flexDirection:'row', justifyContent: 'space-between', marginLeft:-160, marginTop:10}}>
-                <img style={{height:20, width:20, marginTop:15, marginRight:10}} src={home} alt='home'/>
-                <p style={{color:'#9c9c9c', fontSize:15}}>OVERVIEW</p>
+        <div className='productContainer'>
+            <Product title={data.title} image={data.image} subtitle={data.subtitle}/>
+            <Tags tags={data.tags} />
+            <div className='overviewContainer'>
+                <img className='logoImage' src={home} alt='home'/>
+                <p className='overviewText'>OVERVIEW</p>
             </div>
-            <div style={{display:'flex', flexDirection:'row', justifyContent: 'space-between', marginLeft:-190}}>
-                <img style={{height:20, width:20, marginTop:15, marginRight:10}} src={sales} alt='sales'/>
-                <p style={{fontSize:15}}> SALES</p>
+            <div className='salesContainer'>
+                <img className='logoImage' src={sales} alt='sales'/>
+                <p className= 'salesText'>SALES</p>
             </div>
         </div>
     );

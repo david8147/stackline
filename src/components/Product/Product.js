@@ -4,9 +4,11 @@ import './styles.css';
 const Product = ({ image, title, subtitle }) => {
     return (
         <div className='product'>
-            <img className='product-image' src={image} alt={title} />
-            <h3 className='product-title'>{title}</h3>
-            <span className='product-subtitle'>{subtitle}</span>
+            <img className='productImage' src={image} alt={title} />
+            <h4 className='productTitle'>{title}</h4>
+            <div className='subtitleDiv'>
+                <h5 className='productSubtitle'>{subtitle}</h5>
+            </div>
         </div>
     );
 };

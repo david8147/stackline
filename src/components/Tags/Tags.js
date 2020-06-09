@@ -4,12 +4,12 @@ import './styles.css';
 const Tags = ({ tags }) => {
     const renderTags = () =>{
         return(
-            tags.map(tag => (<div className='tag'><span className='tag-name'>{tag}</span></div>)
+            tags.map(tag => (<div className='tag'><span className='tagName'>{tag}</span></div>)
         ))
-    }
+    };
     return (
-        <div className='tag-main-container'>
-            <div className={'tag-container'}>
+        <div className='tagMainContainer'>
+            <div className='tagContainer'>
                 {renderTags()}
             </div>
         </div>

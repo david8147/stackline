@@ -1,0 +1,40 @@
+.months {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+}
+
+.retailSales {
+    stroke: #4b9beb;
+    stroke-width: 2.5px;
+    fill: none;
+}
+
+.wholesaleSales {
+    stroke: #9ea5b8;
+    stroke-width: 2.5px;
+    fill: none;
+}
+
+.graph {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.graphContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphText {
+    font-size: 14px;
+    font-weight: 300;
+    color: #666a75;
+}
+

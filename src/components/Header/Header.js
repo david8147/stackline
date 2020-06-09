@@ -5,7 +5,7 @@ import logo from '../../img/stackline_logo.png';
 const Header = () => {
     return (
         <div className='header'>
-            <img style={{height:60}} src={logo} alt="Stackline Logo"  />
+            <img className='image' src={logo} alt="Stackline Logo"  />
         </div>
     );
 };

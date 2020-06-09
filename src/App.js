@@ -4,8 +4,10 @@ import {fetchData} from './actions/dataFetch';
 
 import Header from './components/Header/Header'
 import ProductDescription from './components/ProductDescription/ProductDescription'
+import SalesData from './components/SalesData/SalesData'
+import Table from './components/Table/Table'
 
-
+import './App.css'
 const App = () =>{
     const data = useSelector((state) => state.dataFetchReducer);
     const dispatch = useDispatch();
@@ -16,19 +18,19 @@ const App = () =>{
 
     const renderData = () =>{
         return (
-            <div className={'content-container'}>
-                <ProductDescription productData={data.productData} />
-                {/*<div style={{ background: white, width: '70%' }}>*/}
-                    {/*<Graph data={data.productData.sales} />*/}
-                    {/*<Sales sales={data.productData.sales} />*/}
-                {/*</div>*/}
+            <div className='mainContainer'>
+                <ProductDescription data={data.productData} />
+                <div className='contentContainer'>
+                    <SalesData data={data.productData.sales} />
+                    <Table data={data.productData.sales} />
+                </div>
             </div>
         );
-    }
+    };
     return (
         <div className="App">
             <Header/>
-            {data.loading ? null : renderData()}
+            {data.loading ? renderData() : null}
         </div>
     );
 }

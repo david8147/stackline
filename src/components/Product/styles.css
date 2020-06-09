@@ -1,23 +1,27 @@
 .product {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     text-align: center;
     padding: 2vh;
 }
 
-.product-subtitle {
+.productSubtitle {
     color: #bebfc2;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: lighter;
+    margin:0;
 }
 
-.product-image {
+.subtitleDiv{
+    width:90%;
+}
+.productImage {
     width: 8rem;
 }
 
-.product-title {
+.productTitle {
     margin: 1rem;
 }
 
